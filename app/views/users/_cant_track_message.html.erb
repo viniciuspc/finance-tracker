@@ -1,0 +1,8 @@
+<span class="badge badge-secondary">
+  You are already tracking
+  <% if current_user.stock_alredy_tracked?(stock.ticker) %>
+    this stock
+  <% elsif !current_user.under_stock_limit? %>
+    10 stocks
+  <% end %>
+</span>
